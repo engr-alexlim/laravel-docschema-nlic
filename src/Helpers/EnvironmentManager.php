@@ -100,7 +100,7 @@ class EnvironmentManager
                 'APP_NAME=Laravel',
                 'APP_ENV=local',
                 'APP_KEY=base64:t2wZGSpe9Jj3py7uFcftBOzrNc+wxnqRhWjqORGWkYI=',
-                'APP_DEBUG=true',
+                'APP_DEBUG=false',
                 'APP_URL=',
                 'DB_CONNECTION=',
                 'DB_HOST=',

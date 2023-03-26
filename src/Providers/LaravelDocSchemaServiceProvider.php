@@ -8,6 +8,9 @@ use Illuminate\Support\ServiceProvider;
 use Alex\LaravelDocSchema\Middleware\canInstall;
 use Alex\LaravelDocSchema\Middleware\canUpdate;
 use Alex\LaravelDocSchema\Middleware\PdocsMiddleware;
+use Illuminate\Support\Facades\DB;
+use Schema;
+
 
 class LaravelDocSchemaServiceProvider extends ServiceProvider
 {
@@ -36,9 +39,11 @@ class LaravelDocSchemaServiceProvider extends ServiceProvider
      */
     public function boot(Router $router)
     {
+
         $router->middlewareGroup('', [PdocsMiddleware::class]); 
         $router->middlewareGroup('install', [CanInstall::class]);
         $router->middlewareGroup('update', [CanUpdate::class]);
+ 
     }
 
     /**
